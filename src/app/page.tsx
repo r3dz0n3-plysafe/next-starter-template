@@ -96,7 +96,7 @@ export default function Home() {
             </h1>
 
             <h2 className="mt-2 text-2xl sm:text-3xl font-medium text-indigo-600/90">
-              We'll be launching soon! 🚀
+              We&#39;ll be launching soon! 🚀
             </h2>
 
             <div className="mt-8 bg-white/60 backdrop-blur-sm p-6 rounded-2xl max-w-lg mx-auto shadow-lg">
