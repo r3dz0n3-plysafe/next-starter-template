@@ -3,16 +3,28 @@
 
 import React from 'react';
 
+// Menambahkan tipe data untuk props komponen
+interface ShapeProps {
+  style?: React.CSSProperties;
+  className?: string;
+}
+
+interface TriangleProps {
+  style?: React.CSSProperties;
+  colorClass?: string;
+}
+
+
 // Komponen untuk satu bentuk dekorasi agar kode lebih rapi
-// Penggunaan `styles.shape` diubah menjadi class name "shape" biasa
-const Shape = ({ style, className = '' }) => {
+// Menambahkan tipe data pada props
+const Shape: React.FC<ShapeProps> = ({style, className = ''}) => {
   return <div className={`shape ${className}`} style={style}></div>;
 };
 
 // Komponen untuk segitiga
-// Penggunaan `styles.shape` diubah menjadi class name "shape" biasa
-const Triangle = ({ style, colorClass = 'text-pink-300' }) => {
-  const triangleStyle = {
+// Menambahkan tipe data pada props
+const Triangle: React.FC<TriangleProps> = ({style, colorClass = 'text-pink-300'}) => {
+  const triangleStyle: React.CSSProperties = {
     width: 0,
     height: 0,
     borderLeft: '12px solid transparent',
@@ -84,7 +96,7 @@ export default function Home() {
             </h1>
 
             <h2 className="mt-2 text-2xl sm:text-3xl font-medium text-indigo-600/90">
-              We&#39;ll be launching soon! 🚀
+              We'll be launching soon! 🚀
             </h2>
 
             <div className="mt-8 bg-white/60 backdrop-blur-sm p-6 rounded-2xl max-w-lg mx-auto shadow-lg">
